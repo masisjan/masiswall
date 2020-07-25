@@ -14,7 +14,7 @@ class CreateAdminMenuTable extends Migration
     public function up()
     {
         Schema::create('admin_menu', function (Blueprint $table) {
-            $table->id('menu_id');
+            $table->increments('menu_id');
             $table->string('menu_title', 100);
             $table->string('menu_path', 100);
         });
